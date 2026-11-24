@@ -15,6 +15,19 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  images: {
+    dangerouslyAllowLocalIP: true, // लोकलहोस्ट की इमेज अनुमति देने के लिए
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "localhost",
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
+  },
 };
 
 export default nextConfig;
